@@ -1,0 +1,38 @@
+﻿@using Poems.Models
+@{
+    Layout = "_Layout";
+}
+
+<section class="s-content s-content s-content--narrow">
+        <div class="row comment-respond">
+            <!-- START respond -->
+                <div id="respond" class="col-full">
+
+                    <h3 class="h2">Добавить стих</h3>
+
+                    <form name="contactForm" id="contactForm" method="post" action="/CreatePoemPage/Create" autocomplete="off">
+                        <fieldset>
+                            <div class="form-field">
+                                <input name="authorName" id="cName" class="full-width" placeholder="Ваше имя" value="" type="text">
+                            </div>
+                            
+                            <div class="form-field">
+                                <input name="title"  class="full-width" placeholder="Название" value="" type="text">
+                            </div>
+                                                        
+                            <div class="message form-field">
+                                <textarea name="text" id="cMessage" class="full-width" placeholder="Текст стиха"></textarea>
+                            </div>
+
+                            <input id="submit" class="btn btn--primary btn-wide btn--large full-width" type="submit">
+
+                        </fieldset>
+                    </form> <!-- end form -->
+
+                </div>
+                <!-- END respond-->
+
+            </div> <!-- end comment-respond -->
+
+
+    </section> <!-- end s-content -->

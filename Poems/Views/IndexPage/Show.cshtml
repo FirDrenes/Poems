@@ -1,0 +1,28 @@
+﻿@using Poems.Models
+@{
+    Layout = "_Layout";
+}
+
+<section class="s-content">
+    @foreach (Poem poem in ViewBag.Poems)
+    {
+        <div class="row entries-wrap wide">
+            <div class="entries">
+                <article class="col-block">
+                    <div class="item-entry" data-aos="zoom-in">
+                        <div class="item-entry__text">    
+                            <div class="item-entry__cat">
+                                <a>@poem.Author.Name</a> 
+                            </div>
+                            <h1 class="item-entry__title"><a href="/PoemPage/@poem.Id">@poem.Title</a></h1>
+                            <div class="item-entry__date">
+                                <a href="/poem/@poem.Id">@poem.PublishDate.ToShortDateString()</a>
+                            </div>
+                        </div>
+                    </div> <!-- item-entry -->
+                </article> <!-- end article -->
+            </div> <!-- end entries -->
+        </div> <!-- end entries-wrap -->
+    }
+
+</section>
